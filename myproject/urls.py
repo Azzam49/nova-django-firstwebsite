@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myapp.views import home
+from myapp.views import home, my_page
 
 urlpatterns = [
     # admin/ : is an admin panel, that django provides us.
@@ -28,4 +28,5 @@ urlpatterns = [
     # path('home/', home)
 
     path('', home), # using empty string '', can access this page by the server domain without any url , as: http://127.0.0.1:8000/
+    path('my-page', my_page)
 ]

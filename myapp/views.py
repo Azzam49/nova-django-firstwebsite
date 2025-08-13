@@ -16,3 +16,7 @@ def home(request):
             # home.html is created at : myapp/templates/myapp/home.htm
     # return render(request, 'home.html', {}) # Error :  TemplateDoesNotExist at /home/ home.html
     return render(request, 'myapp/home.html', {})
+
+
+def my_page(request):
+    return render(request, 'myapp/my-page.html', {})
