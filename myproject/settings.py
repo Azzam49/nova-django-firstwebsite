@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -56,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
-        'APP_DIRS': True,
+        'APP_DIRS': True, # Allows us to serve Templates from this path (templates/myapp/home.html)
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -119,3 +120,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+
+# BASE_DIR : /Users/smartretaildevit4/Desktop/FirstWebsite
+    # BASE_DIR + /static
+
+# DIRS - Directories (Folders)
+# This veriable tells django where we store our Static files
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static'), # '/Users/smartretaildevit4/Desktop/FirstWebsite/static'
+]

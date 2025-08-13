@@ -1,9 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+
+    {% comment %}
+        Comment Tag :
+            - is an Django Template Tags
+            - Django Tempalte Tags allow us to write django code to control html file
+            - comment tag is used to add comments inside html file safely
+
+        here , i want to tell django, to link my styles.css with my home.html
+    {% endcomment %}
+
+
+    {% comment %}
+    Static Tag:
+        - allow us to use our style.css that is found from static folder
+        - we had infomred Django about our static folder from settings.py->STATICFILES_DIRS
+        - IMPORTANT : need to load static to get this working {% load static %}
+    {% endcomment %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
 </head>
 <body>
 
