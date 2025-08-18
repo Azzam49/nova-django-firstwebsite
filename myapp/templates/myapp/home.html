@@ -23,31 +23,7 @@
 
 
     <!-- NavBar/Header Content -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-        <a class="navbar-brand" href="">📘 My Site</a>
-
-
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-
-        <div class="collapse navbar-collapse" id="nav">
-            <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="">Contact</a>
-            </li>
-            </ul>
-        </div>
-        </div>
-    </nav>
+    {% include './assets/navbar.html' %}
 
 
 
@@ -68,12 +44,7 @@
 
 
     <!-- Footer Content -->
-    <footer class="bg-light text-center text-muted py-3 mt-5 border-top">
-        <div class="container">
-            <p>&copy; 2025 My Django App. Built with ❤️ and Bootstrap.</p>
-            <small>Using Django Template System</small>
-        </div>
-    </footer>
+    {% include './assets/footer.html' %}
 
 
 
