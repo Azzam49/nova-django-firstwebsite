@@ -1,36 +1,19 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+{% extends './assets/base.html' %}
+{% comment %}
+  importing all of the code from base.html to use on home.html
+{% endcomment %}
 
 
-    {% comment %}
-        Comment Tag :
-            - is an Django Template Tags
-            - Django Tempalte Tags allow us to write django code to control html file
-            - comment tag is used to add comments inside html file safely
-
-        here , i want to tell django, to link my styles.css with my home.html
-    {% endcomment %}
+{% comment %}
+  allowing home.html to create its own html elements, that will be placed inside {% block mainblock %}{% endblock %} on base.html
+{% endcomment %}
+{% block mainblock %}
+    <h1>🏡 Welcome to Home</h1>
+    <p class="lead">This is the main page of our Django site.</p>
 
 
-    {% comment %}
-    Static Tag:
-        - allow us to use our style.css that is found from static folder
-        - we had infomred Django about our static folder from settings.py->STATICFILES_DIRS
-        - IMPORTANT : need to load static to get this working {% load static %}
-    {% endcomment %}
-    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-
-    <h1>Hello, From home.html File</h1>
-
-    <img width="600" src="{% static 'img/red_car.jpg' %}">
-
-    <script src="{% static 'js/script.js' %}"></script>
-</body>
-</html>
+    <div class="alert alert-info">
+    This page uses Bootstrap and Django template!
+    </div>
+{% endblock %}
