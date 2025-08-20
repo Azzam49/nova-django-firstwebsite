@@ -23,6 +23,13 @@
     <h2>Student Phone : {{phone}}</h2>
     <h2>Student Address : {{address}}</h2>
 
+
+   {% if is_graduated %}
+      <div class="card m-4 p-5 text-dark bg-info text-center">
+        <h2>{{name}} is Graduated!!!!!!</h2>
+      </div>
+   {% endif %}
+
     <br>
     <hr>
     <h2>Subjects: </h2>
@@ -57,6 +64,13 @@
             <br>
             <strong>Pages : {{book.pages}}</strong>
           </p>
+
+        {% if book.read %}
+          <span class="badge bg-success">✅ Read</span>
+        {% else %}
+          <span class="badge bg-warning text-dark">🕒 Not Read</span>
+        {% endif %}
+
         </div>
       </div>
 
