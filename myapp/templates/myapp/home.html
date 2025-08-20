@@ -16,4 +16,31 @@
     <div class="alert alert-info">
     This page uses Bootstrap and Django template!
     </div>
+
+
+    <h2>Student Name : {{name}}</h2>
+    <h2>Student Age : {{age}}</h2>
+    <h2>Student Phone : {{phone}}</h2>
+    <h2>Student Address : {{address}}</h2>
+
+    <br>
+    <hr>
+    <h2>Subjects: </h2>
+
+    {% comment %}
+      {% for i in subjects %}
+        <p>subject : {{i}}</p>
+      {% endfor %}
+    {% endcomment %}
+
+
+    <ul class="list-group">
+
+      {% for i in subjects %}
+        <li class="list-group-item"> {{i}} </li>
+      {% endfor %}
+
+    </ul>
+
+
 {% endblock %}
