@@ -15,7 +15,25 @@ def home(request):
         "phone": "0123456",
         "address": "KL",
 
-        "subjects": ["English", "Math", "Coding", "History", "Geo", "Art", "Sport"]
+        "subjects": ["English", "Math", "Coding", "History", "Geo", "Art", "Sport"],
+
+        "books": [
+            {
+                "title": 'The Python Cookbook',
+                "author": "David Beazley",
+                "pages": 500,
+            },
+            {
+                "title": "Automate the Boring Stuff",
+                "author": "Al Sweigart",
+                "pages": 400,
+            },
+            {
+                'title': 'Fluent Python',
+                'author': 'Luciano Ramalho',
+                'pages': 800,
+            },
+        ],
     }
     # 3 (go to home.html) - use data on html
 

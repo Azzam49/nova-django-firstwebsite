@@ -36,11 +36,31 @@
 
     <ul class="list-group">
 
-      {% for i in subjects %}
-        <li class="list-group-item"> {{i}} </li>
+      {% for subject in subjects %}
+        <li class="list-group-item"> {{subject}} </li>
       {% endfor %}
 
     </ul>
+
+    <br>
+    <hr>
+    <h2>Books: </h2>
+
+    {% for book in books %}
+
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title"> {{book.title}}</h5>
+
+          <p class="card-text">
+            <strong>Author : {{book.author}}</strong>
+            <br>
+            <strong>Pages : {{book.pages}}</strong>
+          </p>
+        </div>
+      </div>
+
+    {% endfor %}
 
 
 {% endblock %}
