@@ -21,7 +21,7 @@ urlpatterns = [
     # admin/ : is an admin panel, that django provides us.
     path('admin/', admin.site.urls),
 
-    path('', home),
-    path('about/', about),
-    path('contact/', contact),
+    path('', home, name="home"),
+    path('about/', about, name="about"),
+    path('contact/', contact, name="contact"),
 ]
