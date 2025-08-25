@@ -17,8 +17,32 @@
     This page uses Bootstrap and Django template!
     </div>
 
+    <hr>
+    <h1>Testing Filters in Django Tempalte </h1>
+    <p>Student Upper : {{name|upper}}</p>
+    <p>Student Lower : {{name|lower}}</p>
+    <p>Student Length : {{name|length}}</p>
+    <p>Student Age + 10 : {{age|add:10}}</p>
 
-    <h2>Student Name : {{name}}</h2>
+    {% comment %} works if nonexists have empty value or not present at all {% endcomment %}
+    <p>nonexists default : {{nonexists|default:"Default"}}</p>
+
+    {% comment %} works only if nonexists_none=None on context dict {% endcomment %}
+    <p>nonexists default_if_none : {{nonexists_none|default_if_none:"Default None"}}</p>
+
+    {% comment %} https://docs.djangoproject.com/en/5.2/ref/templates/builtins/#date {% endcomment %}
+    <p>Joined at : {{joined_at|date:"M - l - Y"}}</p>
+    <p>Joined at : {{joined_at|timesince}} ago</p>
+
+    {% comment %} display Yes if True, display No if False
+    and then convert first letter to captial case {% endcomment %}
+    <p>Graduadted ? : {{is_graduated|yesno|capfirst}}</p>
+
+    <br>
+    <hr>
+
+
+    <h2>Student Name : {{name|slice:"0:3"}}</h2>
     <h2>Student Age : {{age}}</h2>
     <h2>Student Phone : {{phone}}</h2>
     <h2>Student Address : {{address}}</h2>
