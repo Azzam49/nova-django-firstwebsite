@@ -50,3 +50,9 @@ class Student(models.Model):
     # DONE - address           = CharField
     # email             = EmailField
     # DONE - admission_fee     = DecimalField
+
+
+    # This __str__ function, is a function that django expects.
+    # It acts as the representation string for the models' record
+    def __str__(self):
+        return self.name # django will use the `name` column as representation string for each record
