@@ -12,4 +12,5 @@ class StudentAdmin(admin.ModelAdmin):
         "age",
         "address",
         "admission_fee",
+        "email",
     ]

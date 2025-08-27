@@ -46,10 +46,11 @@ class Student(models.Model):
     # 1,234,567.89 (max_digits=9, decimal_places=2)
     # 999.99 (max_digits=5, decimal_places=2)
 
-    # DONE - age               = IntegerField
-    # DONE - address           = CharField
-    # email             = EmailField
-    # DONE - admission_fee     = DecimalField
+    email = models.EmailField(
+        max_length=254,
+        blank=True,
+        null=True
+    )
 
 
     # This __str__ function, is a function that django expects.
